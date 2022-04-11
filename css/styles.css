@@ -56,7 +56,36 @@ ol {
   margin-right: auto;
   padding: 0 15px;
 }
+
 /* ===================================== */
+
+body {
+  margin: 0;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.link {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
 
 /*=========== HEADER================= */
 
@@ -147,14 +176,6 @@ ol {
 .list {
   display: flex;
 }
-.body {
-  background-color: var(--primary-bg-color);
-  color: var(--primary-color);
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
 
 /*==============HERO============*/
 .hero {
@@ -193,6 +214,8 @@ ol {
   font-size: 16px;
   line-height: 1.875;
   text-decoration: none;
+  height: 50px;
+  width: 200px;
   border: 0px;
   color: white;
   padding: 10px 32px;
@@ -202,6 +225,7 @@ ol {
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--hero-btn-hover-color);
+  cursor: pointer;
 }
 
 /*============SECTION===========*/
@@ -209,6 +233,9 @@ ol {
   display: block;
   width: 100%;
   height: auto;
+}
+.section-we-do {
+  padding-bottom: 94px;
 }
 
 .we-do-img-wrap {
@@ -237,6 +264,7 @@ ol {
 
 .section-title {
   padding-top: 94px;
+  padding-bottom: 94px;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -262,22 +290,30 @@ ol {
 }
 .benefits-list {
   display: flex;
-  padding-left: 0;
+  /* padding-left: 0;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 0; */
 }
 
 .benefits-item {
   width: calc(100%-90px) / 4;
 }
 
+.benefits-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .benefits-subtitle {
   margin-top: 0;
   margin-bottom: 10px;
 
+  font-family: Roboto;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
+
 }
 
 .bnf-description {
@@ -285,8 +321,10 @@ ol {
   margin-bottom: 0;
 
   color: var(--secondary-color);
+  font-family: roboto;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .benefits-wrap-icon {
@@ -406,6 +444,8 @@ ol {
   align-items: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team-social-link:hover,
@@ -416,11 +456,13 @@ ol {
 
 .our-team-icon {
   fill: var(--icons-color);
+  
 }
 
 .our-team-social-link:hover .our-team-icon,
 .our-team-social-link:focus .our-team-icon {
   fill: var(--main-color);
+
 }
 
 .our-team-item:not(:last-child) {
@@ -441,8 +483,11 @@ ol {
 /*======SECTION CLIENTS===============*/
 .clients-list {
   display: flex;
-  justify-content: space-between;
 }
+
+.clients-item {
+  width: calc((100% - 5 * 30px) / 6);
+ }
 
 .client-link {
   display: flex;
@@ -455,6 +500,7 @@ ol {
 
   border: 1px solid var(--icons-color);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -486,6 +532,7 @@ ol {
   color: var(--transparent-color);
   font-style: normal;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-logo {
   display: inline-block;
@@ -498,6 +545,7 @@ ol {
 
 .footer-wrapper {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-subtitle {
@@ -526,6 +574,8 @@ ol {
 
   background-color: var(--icons-transparent-color);
   border-radius: 50%;
+
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
@@ -731,7 +781,13 @@ ol {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid #555;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   padding: 0;
+}
+
+.modal-close-btn:hover, .modal-close-btn:focus {
+  fill: var(--accent-color);
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
