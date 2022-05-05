@@ -13,10 +13,15 @@
 
 .portfolio__buttons-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   padding-left: 0px;
+}
+
+.portfolio__button {
+  margin-bottom: 15px;
 }
 
 .portfolio__button:not(:last-child) {
@@ -57,7 +62,7 @@
   padding-left: 0px;
 }
 
-.portfolio__item:not(:nth-last-child(-n + 3)) {
+.portfolio__item:not(:last-child) {
   margin-bottom: 30px;
 }
 

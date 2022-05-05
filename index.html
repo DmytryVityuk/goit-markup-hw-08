@@ -22,7 +22,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="container wrapper">
+      <div class="container header__container">
         <nav class="navigation">
           <a href="./index.html" lang="en" class="header__logo logo"
             ><span class="accent">Web</span>Studio</a
@@ -45,6 +45,13 @@
             </li>
           </ul>
         </nav>
+        <!-- Кнопка Мобильного Меню -->
+        <button class="mobile-menu-btn" type="button" data-menu-open>
+        <svg width="40" height="40">
+          <use class="mobile-menu-btn__icon" href="./images/svg/sprite.svg#burger-menu-icon"></use>
+        </svg>
+      </button>
+      
         <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link link">
@@ -64,8 +71,62 @@
           </li>
         </ul>
       </div>
-    </header>
-    <main>
+
+      <div class="burger-menu" data-menu>
+        <div class="mobile-menu__wrap">
+          <button
+            class="mobile-menu-btn mobile-menu-btn--close"
+            type="button"
+            data-menu-close
+          >
+            <svg width="40" height="40">
+              <use class="mobile-menu-btn__cross" href="./images/svg/sprite.svg#mobile-cls-icon"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu list">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link link focus">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-contacts list">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="mobile-contacts__link link mobile-contacts__link--telephone"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social list">
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="" class="mobile-social__link link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+   </header>
+
+   <main>
       <!-- Секция с Героем -->
       <section class="hero">
         <div class="container">
@@ -93,9 +154,8 @@
               </div>
               <h3 class="bnf__subtitle">Внимание к деталям</h3>
               <p class="bnf__description">
-                Идейные соображения, а также <br />
-                начало повседневной работы по<br />
-                формированию позиции.
+                Идейные соображения, а также начало повседневной работы
+                по формированию позиции.
               </p>
             </li>
             <li class="bnf__item">
@@ -106,9 +166,8 @@
               </div>
               <h3 class="bnf__subtitle">Пунктуальность</h3>
               <p class="bnf__description">
-                Задача организации, в особенности <br />
-                же рамки и место обучения кадров <br />
-                влечет за собой.
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
               </p>
             </li>
             <li class="bnf__item">
@@ -119,9 +178,8 @@
               </div>
               <h3 class="bnf__subtitle">Планирование</h3>
               <p class="bnf__description">
-                Равным образом консультация с <br />
-                широким активом в значительной <br />
-                степени обуславливает.
+                Равным образом консультация с широким активом в
+                значительной степени обуславливает.
               </p>
             </li>
             <li class="bnf__item">
@@ -132,9 +190,8 @@
               </div>
               <h3 class="bnf__subtitle">Современные технологии</h3>
               <p class="bnf__description">
-                Значимость этих проблем настолько <br />
-                очевидна, что реализация плановых<br />
-                заданий.
+                Значимость этих проблем настолько очевидна, что 
+                реализация плановых заданий.
               </p>
             </li>
           </ul>
@@ -143,7 +200,7 @@
 
       <!-- Секция Чем мы занимаемся -->
 
-      <section class="section__we-do">
+      <!-- <section class="section__we-do">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="we-do__list list">
@@ -185,7 +242,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Секция с нашей командой -->
 
@@ -194,12 +251,37 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="our-team__list list">
             <li class="our-team__item">
-              <img
-                class="our-team__img"
-                src="./images/worker-1.jpg"
-                width="270"
-                alt="Дизайнер"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-mobile.jpg    1x,
+                    ./images/worker-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/product-designer-tablet.jpg    1x,
+                    ./images/product-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="./images/worker-mobile.jpg 1x, ./images/worker-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="our-team__img"
+                  src="./images/worker-mobile.jpg"
+                  alt="Фотография сторудника"
+                />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__subtitle">Игорь Демьяненко</h3>
                 <p class="our-team__text">Product designer</p>
@@ -236,12 +318,37 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                class="our-team__img"
-                src="./images/worker-2.jpg"
-                width="270"
-                alt="Фронтэндщик"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-mobile.jpg    1x,
+                    ./images/worker-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/product-designer-tablet.jpg    1x,
+                    ./images/product-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="./images/worker-mobile-2.jpg 1x, ./images/worker-mobile-2@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="our-team__img"
+                  src="./images/worker-mobile.jpg"
+                  alt="Фотография сторудника"
+                />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__subtitle">Ольга Репина</h3>
                 <p class="our-team__text">Frontend Developer</p>
@@ -278,12 +385,37 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                class="our-team__img"
-                src="./images/worker-3.jpg"
-                width="270"
-                alt="Маркетолог"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-mobile.jpg    1x,
+                    ./images/worker-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/product-designer-tablet.jpg    1x,
+                    ./images/product-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="./images/worker-mobile-3.jpg 1x, ./images/worker-mobile-3@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="our-team__img"
+                  src="./images/worker-mobile.jpg"
+                  alt="Фотография сторудника"
+                />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__subtitle">Николай Тарасов</h3>
                 <p class="our-team__text">Marketing</p>
@@ -320,12 +452,37 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img
-                class="our-team__img"
-                src="./images/worker-4.jpg"
-                width="270"
-                alt="Уи Дизайнер"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/worker-mobile.jpg    1x,
+                    ./images/worker-mobile@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/product-designer-tablet.jpg    1x,
+                    ./images/product-designer-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+
+                <source
+                  srcset="./images/worker-mobile.jpg 1x, ./images/worker-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="our-team__img"
+                  src="./images/worker-mobile.jpg"
+                  alt="Фотография сторудника"
+                />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__subtitle">Михаил Ермаков</h3>
                 <p class="our-team__text">UI Designer</p>
@@ -435,7 +592,7 @@
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <!--  -->
+              
               <li class="footer__item">
                 <a class="footer__link" href="mailto:info@example.com"
                   >info@example.com</a
@@ -509,7 +666,7 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
-          <svg class="modal__close-icon" width="18">
+          <svg class="modal__close-icon" width="18" height="18">
             <use href="./images/svg/sprite.svg#close-icon"></use>
           </svg>
         </button>
@@ -568,5 +725,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

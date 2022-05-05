@@ -1,21 +1,31 @@
 .clients {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
   }
 
   &__icon {
     fill: currentColor;
   }
-  &__item:not(:last-child) {
-    margin-right: 30px;
+
+  &__item {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n - 1) {
+        margin-right: 30px;
+    }
+    
+    &:not(:nth-last-child(-n+2)) {
+        margin-bottom: 30px;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    width: 210px;
     height: 92px;
 
     color: var(--icons-color);

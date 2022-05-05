@@ -21,7 +21,7 @@
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-bottom: 30px;
     }
   }
 
@@ -33,6 +33,7 @@
 
   &__social-list {
     display: flex;
+    justify-content: center;
     margin: 0px 32px 0px 32px;
   }
 
