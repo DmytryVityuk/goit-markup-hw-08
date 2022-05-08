@@ -114,12 +114,6 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .burger-menu {
-    display: none;
-  }
-}
-
 .mobile-menu-btn {
   padding: 0;
   border: none;
@@ -146,10 +140,14 @@
   &:focus &__icon {
     fill: var(--accent-color);
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .menu-btn {
-      display: none;
-    }
+@media screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .burger-menu {
+    display: none;
   }
 }

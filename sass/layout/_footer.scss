@@ -1,5 +1,4 @@
 /*==========Footer=============*/
-
 .footer {
   background-color: var(--secondary-bg-color);
   padding-top: 60px;
@@ -8,9 +7,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
     list-style: none;
-    margin-bottom: 60px;
   }
 
   &__link {
@@ -41,13 +38,6 @@
     margin-bottom: 9px;
   }
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
   &__subtitle {
     margin-bottom: 20px;
 
@@ -62,13 +52,10 @@
 }
 
 .footer-social {
-  &__box {
-    margin-bottom: 60px;
-  }
-
   &__items {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   &__item:not(:last-child) {
@@ -91,17 +78,17 @@
   &__icon {
     fill: var(--main-color);
   }
-}
 
-.footer-social__link:hover,
-.footer-social__link:focus {
-  background-color: var(--accent-color);
-  cursor: pointer;
-  color: var(--accent-color);
-}
+  .footer-social__link:hover,
+  .footer-social__link:focus {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    color: var(--accent-color);
+  }
 
-.address {
-  color: var(--main-color);
+  .address {
+    color: var(--main-color);
+  }
 }
 
 /* Footer Modal  */
@@ -148,4 +135,83 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: var(--transparent-color);
+}
+
+@media screen and (max-width: 767px) {
+  .footer__list {
+    margin-bottom: 60px;
+  }
+
+  .footer__wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    &__box {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tablet {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+
+  .footer__input {
+    width: 450px;
+  }
+
+  .footer__wrapper {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__list {
+      align-items: flex-start;
+    }
+
+    &__wrapper {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+
+  .footer-social {
+    &__box {
+      margin-left: 70px;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .tablet {
+    display: flex;
+    align-items: baseline;
+  }
+  /* Footer Modal  */
+
+  .footer {
+    &__subscribe {
+      width: 49%;
+      margin-left: auto;
+    }
+
+    &__form-wrap {
+      display: flex;
+      margin-left: auto;
+    }
+
+    &__input {
+      width: 358px;
+      margin-right: 12px;
+    }
+  }
 }

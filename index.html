@@ -200,49 +200,103 @@
 
       <!-- Секция Чем мы занимаемся -->
 
-      <!-- <section class="section__we-do">
+      <section class="section__we-do">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="we-do__list list">
             <li class="we-do__item">
               <div class="we-do__img-wrap">
-                <img
-                  class="we-do"
-                  src="./images/picture-1.jpg"
-                  width="370"
-                  height="294"
-                  alt="пишет код"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/webp/we-do.webp            1x,
+                      ./images/webp/we-do@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/webp/we-do.jpg            1x,
+                      ./images/webp/we-do@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    class="about-img"
+                    src="./images/we-do.jpg"
+                    width="370"
+                    alt="Десктопные приложения"
+                  />
+                </picture>
                 <h3 class="we-do__img-title">Десктопные приложения</h3>
               </div>
             </li>
             <li class="we-do__item">
               <div class="we-do__img-wrap">
-                <img
-                  class="we-do"
-                  src="./images/picture-2.jpg"
-                  width="370"
-                  height="294"
-                  alt="за ноутом"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/webp/we-do-2.webp            1x,
+                      ./images/webp/we-do-2@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/webp/we-do-2.jpg            1x,
+                      ./images/webp/we-do-2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    class="about-img"
+                    src="./images/we-do-2.jpg"
+                    width="370"
+                    alt="Десктопные приложения"
+                  />
+                </picture>
                 <h3 class="we-do__img-title">Мобильные приложения</h3>
               </div>
             </li>
             <li class="we-do__item">
               <div class="we-do__img-wrap">
-                <img
-                  class="we-do"
-                  src="./images/picture-3.jpg"
-                  width="370"
-                  height="294"
-                  alt="за планшетом"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/webp/we-do-3.webp            1x,
+                      ./images/webp/we-do-3@2x.webp 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/webp/we-do-3.jpg            1x,
+                      ./images/webp/we-do-3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+
+                  <img
+                    class="about-img"
+                    src="./images/we-do-3.jpg"
+                    width="370"
+                    alt="Десктопные приложения"
+                  />
+                </picture>
                 <h3 class="we-do__img-title">Дизайнерские решения</h3>
               </div>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Секция с нашей командой -->
 
@@ -254,8 +308,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/worker-mobile.jpg    1x,
-                    ./images/worker-mobile@2x.jpg 2x
+                    ./images/worker-desk.jpg    1x,
+                    ./images/worker-desk@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                   type="image/jpg"
@@ -263,8 +317,8 @@
 
                 <source
                   srcset="
-                    ./images/product-designer-tablet.jpg    1x,
-                    ./images/product-designer-tablet@2x.jpg 2x
+                    ./images/worker-tablet.jpg    1x,
+                    ./images/worker-tablet@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                   type="image/jpg"
@@ -276,6 +330,30 @@
                   type="image/jpg"
                 />
 
+                <source
+                  srcset="
+                    ./images/webp/worker-desk.webp   1x,
+                    ./images/webp/worker-desk@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-tablet.webp    1x,
+                    ./images/webp/worker-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="./images/webp/worker-mobile.webp 1x, ./images/worker-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
                 <img
                   class="our-team__img"
                   src="./images/worker-mobile.jpg"
@@ -284,7 +362,7 @@
               </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__subtitle">Игорь Демьяненко</h3>
-                <p class="our-team__text">Product designer</p>
+                <p class="our-team__text">Product Designer</p>
                 <ul class="our-team__social-list list">
                   <li class="our-team__social-item">
                     <a class="our-team__social-link" href="">
@@ -321,8 +399,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/worker-mobile.jpg    1x,
-                    ./images/worker-mobile@2x.jpg 2x
+                    ./images/worker-desk-2.jpg    1x,
+                    ./images/worker-desk-2@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                   type="image/jpg"
@@ -330,8 +408,8 @@
 
                 <source
                   srcset="
-                    ./images/product-designer-tablet.jpg    1x,
-                    ./images/product-designer-tablet@2x.jpg 2x
+                    ./images/worker-tablet-2.jpg    1x,
+                    ./images/worker-tablet-2@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                   type="image/jpg"
@@ -341,6 +419,30 @@
                   srcset="./images/worker-mobile-2.jpg 1x, ./images/worker-mobile-2@2x.jpg 2x"
                   media="(max-width: 767px)"
                   type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-desk-2.webp   1x,
+                    ./images/webp/worker-desk-2@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-tablet-2.webp    1x,
+                    ./images/webp/worker-tablet-2@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="./images/webp/worker-mobile-2.webp 1x, ./images/worker-mobile-2@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
                 />
 
                 <img
@@ -388,8 +490,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/worker-mobile.jpg    1x,
-                    ./images/worker-mobile@2x.jpg 2x
+                    ./images/worker-desk-3.jpg    1x,
+                    ./images/worker-desk-3@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                   type="image/jpg"
@@ -397,8 +499,8 @@
 
                 <source
                   srcset="
-                    ./images/product-designer-tablet.jpg    1x,
-                    ./images/product-designer-tablet@2x.jpg 2x
+                    ./images/worker-tablet-3.jpg    1x,
+                    ./images/worker-tablet-3@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                   type="image/jpg"
@@ -408,6 +510,30 @@
                   srcset="./images/worker-mobile-3.jpg 1x, ./images/worker-mobile-3@2x.jpg 2x"
                   media="(max-width: 767px)"
                   type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-desk-3.webp   1x,
+                    ./images/webp/worker-desk-3@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-tablet-3.webp    1x,
+                    ./images/webp/worker-tablet-3@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="./images/webp/worker-mobile-3.webp 1x, ./images/worker-mobile-3@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
                 />
 
                 <img
@@ -455,8 +581,8 @@
               <picture>
                 <source
                   srcset="
-                    ./images/worker-mobile-4.jpg    1x,
-                    ./images/worker-mobile-4@2x.jpg 2x
+                    ./images/worker-desk-4.jpg    1x,
+                    ./images/worker-desk-4@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
                   type="image/jpg"
@@ -464,8 +590,8 @@
 
                 <source
                   srcset="
-                    ./images/product-designer-tablet.jpg    1x,
-                    ./images/product-designer-tablet@2x.jpg 2x
+                    ./images/worker-tablet-4.jpg    1x,
+                    ./images/worker-tablet-4@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
                   type="image/jpg"
@@ -475,6 +601,30 @@
                   srcset="./images/worker-mobile-4.jpg 1x, ./images/worker-mobile-4@2x.jpg 2x"
                   media="(max-width: 767px)"
                   type="image/jpg"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-desk-4.webp   1x,
+                    ./images/webp/worker-desk-4@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/webp/worker-tablet-4.webp    1x,
+                    ./images/webp/worker-tablet-4@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="./images/webp/worker-mobile-4.webp 1x, ./images/worker-mobile-4@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
                 />
 
                 <img
@@ -579,6 +729,7 @@
 
     <footer class="footer">
       <div class="container footer__wrapper">
+        <div class="tablet">
         <div class="footer__contacts">
           <a class="footer__logo logo" href="./index.html" lang="en"
             ><span class="accent">Web</span>Studio</a
@@ -638,6 +789,7 @@
               </a>
             </li>
           </ul>
+        </div>
         </div>
         <div class="footer__subscribe">
           <form class="footer__form">
