@@ -811,17 +811,11 @@ ol {
     display: block;
     flex-direction: column;
   }
-  .bnf__item {
-    width: calc(100%-90px)/4;
-  }
   .bnf__item:not(:last-child) {
     margin-bottom: 30px;
   }
   .bnf__list {
     display: flex;
-  }
-  .bnf__item {
-    width: calc(100%-90px)/4;
   }
 }
 
@@ -844,9 +838,6 @@ ol {
 @media screen and (min-width: 1200px) {
   .bnf__list {
     display: flex;
-  }
-  .bnf__item {
-    width: calc(100%-90px)/4;
   }
   .bnf__item:not(:last-child) {
     margin-right: 30px;

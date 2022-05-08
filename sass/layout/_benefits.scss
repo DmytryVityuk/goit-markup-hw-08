@@ -50,18 +50,13 @@
       display: block;
       flex-direction: column;
     }
-    &__item {
-      width: calc(100%-90px) / 4;
-    }
+    
     &__item:not(:last-child) {
       margin-bottom: 30px;
     }
 
     &__list {
       display: flex;
-    }
-    &__item {
-      width: calc(100%-90px) / 4;
     }
   }
 }
@@ -90,9 +85,7 @@
     &__list {
       display: flex;
     }
-    &__item {
-      width: calc(100%-90px) / 4;
-    }
+
     &__item:not(:last-child) {
       margin-right: 30px;
     }
